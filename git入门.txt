@@ -2,7 +2,7 @@
 git config --global user.name 'Gerlat-x'
 git config --global user.email '804625792@qq.com'
 
-git init      #初始化一个文件夹
+git init      #初始化一个文件夹把这个文件夹变成Git可管理的仓库
 git status    #查看状态
 git add 文件  #添加文件到暂存区
 git commit -m '***' #提交到本地仓库并添加注释说明
