@@ -1,0 +1,24 @@
+#初始化git
+git config --global user.name 'Gerlat-x'
+git config --global user.email '804625792@qq.com'
+
+git init      #初始化一个文件夹
+git status    #查看状态
+git add 文件  #添加文件到暂存区
+git commit -m '***' #提交到本地仓库并添加注释说明
+git push      #提交到远程仓库
+
+git -rm 文件  #删除仓库文件
+git clone URL #克隆项目到本地仓库
+git config --list #查看配置信息
+
+
+注意每个单词后都有空格
+创建文件夹：mkdir 文件名
+进入文件 ： cd 文件名
+查看文件 ： ls
+查看仓库状态： git status
+编辑文件 ： vi
+查看设置：git config --list
+history 显示历史输入过的命令
+clear 清屏
