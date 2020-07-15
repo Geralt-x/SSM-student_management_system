@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有账户</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+<div id="list">
+    <button @click="listAll">查询所有账户</button>
+    <table border="1" cellpadding="0">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>money</td>
+        </tr>
+        <tr v-for="account in lists">
+            <td>{{account.id}}</td>
+            <td>{{account.name}}</td>
+            <td>{{account.money}}</td>
+        </tr>
+    </table>
+
+
+<script>
+     var listAllAccount = new Vue({
+        el: '#list',
+        data: {
+            lists: null
+            },
+       methods:{
+            listAll:function(){
+                var that = this,
+                    axios.get("http://localost:8080/account/findAll")
+                .then(function (response) {
+                    that.lists = reponse.data;
+                }).catch(function (reason) {
+                    alert("error");
+                    });
+
+            }
+       }
+
+    });
+</script>
+</body>
+</html>
