@@ -1,2 +1,3 @@
 # SSM-student_management_system
-ssm整合项目
+学生管理系统：Spring、SpringMVC、Mybatis、Mysql
+实现了对学生信息进行增删改查的功能
